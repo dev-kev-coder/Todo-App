@@ -1,0 +1,44 @@
+# ASP.NET Core MVC
+
+# Build and publish output
+/bin/
+/obj/
+/publish/
+
+# Dependency directories
+/bower_components/
+/node_modules/
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.lock.json
+*.swp
+
+# Visual Studio Code
+.vscode/
+.vs/
+
+# Mac
+.DS_Store
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Logs and exceptions
+app.log
+*.log
+
+# Environment variables file
+.env
+
+# NuGet Packages
+*.nupkg
+
+# Rider
+.idea/
+
+# Windows
+Thumbs.db
