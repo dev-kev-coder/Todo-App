@@ -1,3 +1,7 @@
+// Database ORM
+using Microsoft.EntityFrameworkCore;
+using todo_app.Data;
+
 namespace todo_app
 {
     public class Program
@@ -8,6 +12,14 @@ namespace todo_app
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Add Database ORM
+            builder.Services.AddDbContext<TodoDbContext>(options =>
+            {
+                var connectionString = Environment.GetEnvironmentVariable("TodoAppSqlConnection", EnvironmentVariableTarget.Machine);
+
+                options.UseSqlServer(connectionString); 
+            });
 
             var app = builder.Build();
 
